@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        html {
+            height: 740px;
+            width: 360px;
+        }
+        body {
+            background-color: #97d3e8;
+        }
+
+        .meu_balao
+        {
+            position: relative;
+            top: 175px;
+            left: 40px;
+            animation: aparecer 7s ;
+            width: 250px;
+            z-index: 1;
+        }
+
+        @keyframes aparecer
+        {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        
+        .luz
+        {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            border-radius: 100px;
+            position: relative;
+            top: -50px;
+            left: 70px;
+            z-index: 0;
+            filter: blur(20px);
+            animation: acender 2s;
+            animation-delay: 3s ;
+           opacity: 0;
+           animation-fill-mode: forwards;
+        }
+
+        @keyframes acender
+        {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+        }
+        
+</style>
+
+
+
+</head>
+<body>
+    <img src="logoetexto.png" class="meu_balao">
+    <div class="luz">  </div>
+</body>
+</html>
